@@ -80,7 +80,7 @@ const BoatCard = ({
 
         <div className="flex items-center justify-between">
           <div>
-            <span className="text-2xl font-bold text-foreground">{price}</span>
+            <span className="text-2xl font-bold text-foreground">KES {price}</span>
             <span className="text-sm text-muted-foreground">/person</span>
           </div>
           <Link to={`/boat/${id}`}>

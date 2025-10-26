@@ -21,7 +21,7 @@ const BoatDetails = () => {
     operator: "Captain John's Tours",
     rating: 4.8,
     reviews: 124,
-    price: 45,
+    price: 5850,
     capacity: 8,
     duration: "3 hours",
     location: "Mombasa Marina",
@@ -146,7 +146,7 @@ const BoatDetails = () => {
               <Card className="sticky top-24 shadow-card">
                 <CardHeader>
                   <CardTitle className="flex items-baseline gap-2">
-                    <span className="text-3xl font-bold">${boat.price}</span>
+                    <span className="text-3xl font-bold">KES {boat.price.toLocaleString()}</span>
                     <span className="text-base font-normal text-muted-foreground">/person</span>
                   </CardTitle>
                 </CardHeader>
@@ -182,18 +182,18 @@ const BoatDetails = () => {
                   <div className="space-y-2">
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">
-                        ${boat.price} × {guests} guests
+                        KES {boat.price.toLocaleString()} × {guests} guests
                       </span>
-                      <span>${boat.price * guests}</span>
+                      <span>KES {(boat.price * guests).toLocaleString()}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Service fee</span>
-                      <span>${Math.round(boat.price * guests * 0.1)}</span>
+                      <span>KES {Math.round(boat.price * guests * 0.1).toLocaleString()}</span>
                     </div>
                     <Separator />
                     <div className="flex justify-between text-lg font-semibold">
                       <span>Total</span>
-                      <span>${boat.price * guests + Math.round(boat.price * guests * 0.1)}</span>
+                      <span>KES {(boat.price * guests + Math.round(boat.price * guests * 0.1)).toLocaleString()}</span>
                     </div>
                   </div>
 

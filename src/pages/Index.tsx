@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Search, MapPin, Calendar, CheckCircle, Shield, Star, DollarSign, Waves, Anchor, Fish, Glasses, Sailboat, Sunset, Ship } from "lucide-react";
+import { Search, MapPin, Calendar, CheckCircle, Shield, Star, DollarSign, Waves, Anchor, Fish, Glasses, Sailboat, Sunset, Ship, Zap } from "lucide-react";
 import heroBoat from "@/assets/hero-boat.jpg";
 import scenicTour from "@/assets/scenic-tour.jpg";
 import fishingTrip from "@/assets/fishing-trip.jpg";
@@ -20,37 +20,49 @@ const Index = () => {
       title: "Scenic Tours",
       image: scenicTour,
       icon: <Waves className="w-5 h-5" />,
-      startingPrice: "$35",
+      startingPrice: "KES 4,500",
     },
     {
       title: "Fishing Trips",
       image: fishingTrip,
       icon: <Fish className="w-5 h-5" />,
-      startingPrice: "$50",
+      startingPrice: "KES 6,500",
     },
     {
       title: "Snorkeling",
       image: snorkelingImg,
       icon: <Glasses className="w-5 h-5" />,
-      startingPrice: "$40",
+      startingPrice: "KES 5,200",
     },
     {
       title: "Sunset Cruise",
       image: sunsetCruise,
       icon: <Sunset className="w-5 h-5" />,
-      startingPrice: "$65",
+      startingPrice: "KES 8,500",
     },
     {
       title: "Island Hopping",
       image: islandHopping,
       icon: <Sailboat className="w-5 h-5" />,
-      startingPrice: "$55",
+      startingPrice: "KES 7,200",
     },
     {
-      title: "Private Charters",
+      title: "Jet Ski Rides",
       image: scenicTour,
+      icon: <Zap className="w-5 h-5" />,
+      startingPrice: "KES 2,600",
+    },
+    {
+      title: "Swahili Dhow Cruises",
+      image: sunsetCruise,
       icon: <Ship className="w-5 h-5" />,
-      startingPrice: "$150",
+      startingPrice: "KES 5,500",
+    },
+    {
+      title: "Water Sports",
+      image: fishingTrip,
+      icon: <Anchor className="w-5 h-5" />,
+      startingPrice: "KES 3,900",
     },
   ];
 
