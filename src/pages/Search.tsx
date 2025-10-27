@@ -131,11 +131,11 @@ const Search = () => {
                       <SelectValue placeholder="Activity" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="scenic">Scenic Tours</SelectItem>
-                      <SelectItem value="fishing">Fishing Trips</SelectItem>
-                      <SelectItem value="snorkeling">Snorkeling</SelectItem>
-                      <SelectItem value="sunset">Sunset Cruise</SelectItem>
-                      <SelectItem value="island">Island Hopping</SelectItem>
+                      <SelectItem value="jetski">JET SKI</SelectItem>
+                      <SelectItem value="dhows">SWAHILI DHOWS</SelectItem>
+                      <SelectItem value="kite">KITE SURFING</SelectItem>
+                      <SelectItem value="windsurf">WINDSURFING</SelectItem>
+                      <SelectItem value="snorkeling">SNORKELING</SelectItem>
                     </SelectContent>
                   </Select>
 
