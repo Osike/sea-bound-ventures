@@ -13,12 +13,13 @@ import fishingTrip from "@/assets/fishing-trip.jpg";
 import snorkelingImg from "@/assets/snorkeling.jpg";
 import sunsetCruise from "@/assets/sunset-cruise.jpg";
 import islandHopping from "@/assets/island-hopping.jpg";
+import boat1 from "@/assets/boat-1.jpg";
 
 const Index = () => {
   const activities = [
     {
       title: "Jet Ski Rides",
-      image: scenicTour,
+      image: islandHopping,
       icon: <Zap className="w-5 h-5" />,
       startingPrice: "KES 2,600",
     },
@@ -30,13 +31,13 @@ const Index = () => {
     },
     {
       title: "Kiting",
-      image: islandHopping,
+      image: boat1,
       icon: <Wind className="w-5 h-5" />,
       startingPrice: "KES 3,500",
     },
     {
       title: "Windsurfing",
-      image: fishingTrip,
+      image: boat1,
       icon: <Sailboat className="w-5 h-5" />,
       startingPrice: "KES 4,200",
     },
@@ -60,7 +61,7 @@ const Index = () => {
     },
     {
       title: "Sunset Cruise",
-      image: sunsetCruise,
+      image: heroBoat,
       icon: <Sunset className="w-5 h-5" />,
       startingPrice: "KES 8,500",
     },
