@@ -6,16 +6,47 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Search, MapPin, Calendar, CheckCircle, Shield, Star, DollarSign, Waves, Anchor, Fish, Glasses, Sailboat, Sunset, Ship, Zap } from "lucide-react";
+import { Search, MapPin, Calendar, CheckCircle, Shield, Star, DollarSign, Waves, Anchor, Fish, Glasses, Sailboat, Sunset, Ship, Zap, Wind } from "lucide-react";
 import heroBoat from "@/assets/hero-boat.jpg";
 import scenicTour from "@/assets/scenic-tour.jpg";
 import fishingTrip from "@/assets/fishing-trip.jpg";
 import snorkelingImg from "@/assets/snorkeling.jpg";
 import sunsetCruise from "@/assets/sunset-cruise.jpg";
 import islandHopping from "@/assets/island-hopping.jpg";
+import boat1 from "@/assets/boat-1.jpg";
 
 const Index = () => {
   const activities = [
+    {
+      title: "Jet Ski Rides",
+      image: islandHopping,
+      icon: <Zap className="w-5 h-5" />,
+      startingPrice: "KES 2,600",
+    },
+    {
+      title: "Swahili Dhow Cruises",
+      image: sunsetCruise,
+      icon: <Ship className="w-5 h-5" />,
+      startingPrice: "KES 5,500",
+    },
+    {
+      title: "Kiting",
+      image: boat1,
+      icon: <Wind className="w-5 h-5" />,
+      startingPrice: "KES 3,500",
+    },
+    {
+      title: "Windsurfing",
+      image: boat1,
+      icon: <Sailboat className="w-5 h-5" />,
+      startingPrice: "KES 4,200",
+    },
+    {
+      title: "Snorkeling",
+      image: snorkelingImg,
+      icon: <Glasses className="w-5 h-5" />,
+      startingPrice: "KES 5,200",
+    },
     {
       title: "Scenic Tours",
       image: scenicTour,
@@ -29,40 +60,10 @@ const Index = () => {
       startingPrice: "KES 6,500",
     },
     {
-      title: "Snorkeling",
-      image: snorkelingImg,
-      icon: <Glasses className="w-5 h-5" />,
-      startingPrice: "KES 5,200",
-    },
-    {
       title: "Sunset Cruise",
-      image: sunsetCruise,
+      image: heroBoat,
       icon: <Sunset className="w-5 h-5" />,
       startingPrice: "KES 8,500",
-    },
-    {
-      title: "Island Hopping",
-      image: islandHopping,
-      icon: <Sailboat className="w-5 h-5" />,
-      startingPrice: "KES 7,200",
-    },
-    {
-      title: "Jet Ski Rides",
-      image: scenicTour,
-      icon: <Zap className="w-5 h-5" />,
-      startingPrice: "KES 2,600",
-    },
-    {
-      title: "Swahili Dhow Cruises",
-      image: sunsetCruise,
-      icon: <Ship className="w-5 h-5" />,
-      startingPrice: "KES 5,500",
-    },
-    {
-      title: "Water Sports",
-      image: fishingTrip,
-      icon: <Anchor className="w-5 h-5" />,
-      startingPrice: "KES 3,900",
     },
   ];
 
