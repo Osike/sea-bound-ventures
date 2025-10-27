@@ -100,8 +100,8 @@ const Index = () => {
           </Badge>
           
           <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-tight">
-            Your Gateway to <br />
-            <span className="text-gradient-sunset">Unforgettable</span> Sea Adventures
+            Experience the <br />
+            <span className="text-gradient-sunset">Coastal</span> fun
           </h1>
           
           <p className="text-xl md:text-2xl text-white/95 mb-12 max-w-2xl mx-auto">
@@ -130,10 +130,10 @@ const Index = () => {
                   <Anchor className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                   <select className="w-full h-12 pl-11 pr-4 rounded-lg border border-input bg-white">
                     <option>Activity Type</option>
-                    <option>Scenic Tours</option>
-                    <option>Fishing Trips</option>
+                    <option>Sunset cruise</option>
+                    <option>Sunrise cruise</option>
                     <option>Snorkeling</option>
-                    <option>Sunset Cruise</option>
+                    <option>Surfing</option>
                   </select>
                 </div>
                 <Link to="/search" className="w-full">

@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar } from "@/components/ui/calendar";
 import { Separator } from "@/components/ui/separator";
 import { Star, Users, Clock, MapPin, Shield, CheckCircle2, Heart } from "lucide-react";
-import boatImage from "@/assets/boat-1.jpg";
+import boatImage from "@/assets/jetski7.jpg";
 
 const BoatDetails = () => {
   const { id } = useParams();
@@ -17,7 +17,7 @@ const BoatDetails = () => {
 
   // Mock boat data
   const boat = {
-    name: "Ocean Explorer",
+    name: "JETSKI RENTAL",
     operator: "Captain John's Tours",
     rating: 4.8,
     reviews: 124,
@@ -215,6 +215,64 @@ const BoatDetails = () => {
       </main>
 
       <Footer />
+      {/* Structured Data: Product (Boat Listing) + Breadcrumb */}
+      {
+        // Build JSON-LD using boat data
+      }
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: boat.name,
+            description: "Join us for an unforgettable ocean adventure exploring the beautiful coastline. Equipment and refreshments included.",
+            image: [boat.image],
+            brand: { "@type": "Brand", name: boat.operator },
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: String(boat.rating),
+              reviewCount: String(boat.reviews),
+              bestRating: "5",
+              worstRating: "1"
+            },
+            offers: {
+              "@type": "Offer",
+              price: String(boat.price),
+              priceCurrency: "KES",
+              availability: "https://schema.org/InStock",
+              url: (typeof window !== "undefined" && window.location.href) ? window.location.href : `https://barrizii.com/boat-rides/mombasa/${boat.name.replace(/\s+/g, '-').toLowerCase()}`,
+              priceValidUntil: "2025-12-31",
+              validFrom: "2025-01-01"
+            },
+            review: [
+              {
+                "@type": "Review",
+                author: { "@type": "Person", name: "Sarah Johnson" },
+                reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+                reviewBody: "Amazing experience! The crew was professional and the snorkeling spots were incredible.",
+                datePublished: "2025-01-15"
+              }
+            ]
+          })
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://barrizii.com" },
+              { "@type": "ListItem", position: 2, name: "Boat Rides", item: "https://barrizii.com/boat-rides" },
+              { "@type": "ListItem", position: 3, name: boat.location || "Mombasa", item: `https://barrizii.com/destinations/${(boat.location || 'mombasa').toString().toLowerCase().replace(/\s+/g, '-')}` },
+              { "@type": "ListItem", position: 4, name: boat.name, item: (typeof window !== "undefined" && window.location.href) ? window.location.href : undefined }
+            ]
+          })
+        }}
+      />
     </div>
   );
 };
