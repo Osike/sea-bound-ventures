@@ -8,36 +8,39 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Search, MapPin, Calendar, CheckCircle, Shield, Star, DollarSign, Waves, Anchor, Fish, Glasses, Sailboat, Sunset, Ship, Zap, Wind } from "lucide-react";
 import heroBoat from "@/assets/hero-boat.jpg";
-import scenicTour from "@/assets/scenic-tour.jpg";
-import fishingTrip from "@/assets/fishing-trip.jpg";
+import sunrisedhow from "@/assets/sunrisedhow.jpg";
+import kayak1 from "@/assets/kayak1.jpg";
 import snorkelingImg from "@/assets/snorkeling.jpg";
-import sunsetCruise from "@/assets/sunset-cruise.jpg";
+import sunsetCruise from "@/assets/sunsetdhow.jpg";
 import islandHopping from "@/assets/island-hopping.jpg";
-import boat1 from "@/assets/boat-1.jpg";
+import jetski1 from "@/assets/jetski1.jpg";
+import swahiliDhow from "@/assets/swahilidhow.jpg";
+import windsurf1 from "@/assets/windsurfing1.jpg";
+import windsurf2 from "@/assets/windsurfing2.jpg";
 
 const Index = () => {
   const activities = [
     {
       title: "Jet Ski Rides",
-      image: islandHopping,
+      image: jetski1,
       icon: <Zap className="w-5 h-5" />,
-      startingPrice: "KES 2,600",
+      startingPrice: "KES 1,600",
     },
     {
       title: "Swahili Dhow Cruises",
-      image: sunsetCruise,
+      image: swahiliDhow,
       icon: <Ship className="w-5 h-5" />,
       startingPrice: "KES 5,500",
     },
     {
       title: "Kiting",
-      image: boat1,
+      image: windsurf1,
       icon: <Wind className="w-5 h-5" />,
       startingPrice: "KES 3,500",
     },
     {
       title: "Windsurfing",
-      image: boat1,
+      image: windsurf2,
       icon: <Sailboat className="w-5 h-5" />,
       startingPrice: "KES 4,200",
     },
@@ -48,20 +51,20 @@ const Index = () => {
       startingPrice: "KES 5,200",
     },
     {
-      title: "Scenic Tours",
-      image: scenicTour,
+      title: "Sunrise Cruise",
+      image: sunrisedhow,
       icon: <Waves className="w-5 h-5" />,
       startingPrice: "KES 4,500",
     },
     {
-      title: "Fishing Trips",
-      image: fishingTrip,
-      icon: <Fish className="w-5 h-5" />,
+      title: "Kayak Tours",
+      image: kayak1,
+      icon: <Anchor className="w-5 h-5" />,
       startingPrice: "KES 6,500",
     },
     {
       title: "Sunset Cruise",
-      image: heroBoat,
+      image: sunsetCruise,
       icon: <Sunset className="w-5 h-5" />,
       startingPrice: "KES 8,500",
     },
