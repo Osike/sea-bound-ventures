@@ -9,7 +9,11 @@ import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Search as SearchIcon, SlidersHorizontal, MapPin, Calendar as CalendarIcon } from "lucide-react";
 import { format } from "date-fns";
+import swahiliDhow from "@/assets/swahilidhow.jpg";
+import jetski from "@/assets/jetski1.jpg";
 import boatImage from "@/assets/boat-1.jpg";
+import kayak from "@/assets/kayak1.jpg";
+import heroBoat from "@/assets/hero-boat.jpg";
 
 const Search = () => {
   const [date, setDate] = useState<Date>();
@@ -21,7 +25,7 @@ const Search = () => {
       id: "1",
       name: "SWAHILI DHOWS",
       operator: "Captain John's Tours",
-      image: boatImage,
+      image: swahiliDhow,
       rating: 4.8,
       reviews: 124,
       price: "5,850",
@@ -34,7 +38,7 @@ const Search = () => {
       id: "2",
       name: "JETSKIS",
       operator: "Traditional Dhow Cruises",
-      image: boatImage,
+      image: jetski,
       rating: 4.9,
       reviews: 89,
       price: "5,500",
@@ -58,7 +62,7 @@ const Search = () => {
       id: "4",
       name: "KAYAKS",
       operator: "Speed Water Sports",
-      image: boatImage,
+      image: kayak,
       rating: 4.5,
       reviews: 67,
       price: "2,600",
@@ -71,7 +75,7 @@ const Search = () => {
       id: "5",
       name: "YATCH RIDE",
       operator: "Swahili Heritage Tours",
-      image: boatImage,
+      image: heroBoat,
       rating: 4.8,
       reviews: 112,
       price: "6,200",
