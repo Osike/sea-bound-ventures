@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -8,35 +8,23 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar } from "@/components/ui/calendar";
 import { Separator } from "@/components/ui/separator";
 import { Star, Users, Clock, MapPin, Shield, CheckCircle2, Heart } from "lucide-react";
-import boatImage from "@/assets/jetski7.jpg";
+import { getBoatById } from "@/data/boats";
 
 const BoatDetails = () => {
   const { id } = useParams();
   const [date, setDate] = useState<Date>();
   const [guests, setGuests] = useState(2);
 
-  // Mock boat data
-  const boat = {
-    name: "JETSKI RENTAL",
-    operator: "Captain John's Tours",
-    rating: 4.8,
-    reviews: 124,
-    price: 5850,
-    capacity: 8,
-    duration: "3 hours",
-    location: "Mombasa Marina",
-    verified: true,
-    image: boatImage,
-  };
+  const boatData = getBoatById(id || "");
 
-  const features = [
-    "Life jackets provided",
-    "Snorkeling equipment",
-    "Refreshments included",
-    "Professional guide",
-    "Photo opportunities",
-    "All safety equipment",
-  ];
+  if (!boatData) {
+    return <Navigate to="/search" replace />;
+  }
+
+  const boat = {
+    ...boatData,
+    price: parseInt(boatData.price.replace(/,/g, "")),
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -97,15 +85,8 @@ const BoatDetails = () => {
 
                 <div>
                   <h2 className="text-2xl font-display font-semibold mb-4">About this experience</h2>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Join us for an unforgettable ocean adventure! Explore the beautiful coastline, 
-                    discover hidden coves, and experience the thrill of the open sea. Our experienced 
-                    captain and crew ensure your safety and comfort throughout the journey.
-                  </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    Perfect for families, couples, or groups of friends looking for an authentic 
-                    sea experience. We provide all necessary equipment and refreshments to make 
-                    your trip memorable.
+                    {boat.description}
                   </p>
                 </div>
 
@@ -114,7 +95,7 @@ const BoatDetails = () => {
                 <div>
                   <h2 className="text-2xl font-display font-semibold mb-4">What's included</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {features.map((feature, index) => (
+                    {boat.features.map((feature, index) => (
                       <div key={index} className="flex items-center gap-2">
                         <CheckCircle2 className="w-5 h-5 text-success" />
                         <span>{feature}</span>

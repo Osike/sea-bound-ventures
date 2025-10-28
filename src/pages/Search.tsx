@@ -9,93 +9,11 @@ import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Search as SearchIcon, SlidersHorizontal, MapPin, Calendar as CalendarIcon } from "lucide-react";
 import { format } from "date-fns";
-import swahiliDhow from "@/assets/swahilidhow.jpg";
-import jetski from "@/assets/jetski1.jpg";
-import boatImage from "@/assets/boat-1.jpg";
-import kayak from "@/assets/kayak1.jpg";
-import heroBoat from "@/assets/hero-boat.jpg";
+import { boats } from "@/data/boats";
 
 const Search = () => {
   const [date, setDate] = useState<Date>();
   const [location, setLocation] = useState("");
-
-  // Mock data - in real app, this would come from API
-  const boats = [
-    {
-      id: "1",
-      name: "SWAHILI DHOWS",
-      operator: "Captain John's Tours",
-      image: swahiliDhow,
-      rating: 4.8,
-      reviews: 124,
-      price: "5,850",
-      capacity: 8,
-      location: "Mombasa Marina",
-      verified: true,
-      featured: true,
-    },
-    {
-      id: "2",
-      name: "JETSKIS",
-      operator: "Traditional Dhow Cruises",
-      image: jetski,
-      rating: 4.9,
-      reviews: 89,
-      price: "5,500",
-      capacity: 12,
-      location: "Lamu Island",
-      verified: true,
-    },
-    {
-      id: "3",
-      name: "PEDLE BOATS",
-      operator: "Island Hopping Co.",
-      image: boatImage,
-      rating: 4.7,
-      reviews: 156,
-      price: "4,950",
-      capacity: 10,
-      location: "Diani Beach",
-      verified: true,
-    },
-    {
-      id: "4",
-      name: "KAYAKS",
-      operator: "Speed Water Sports",
-      image: kayak,
-      rating: 4.5,
-      reviews: 67,
-      price: "2,600",
-      capacity: 2,
-      location: "Nyali Beach",
-      verified: true,
-      featured: true,
-    },
-    {
-      id: "5",
-      name: "YATCH RIDE",
-      operator: "Swahili Heritage Tours",
-      image: heroBoat,
-      rating: 4.8,
-      reviews: 112,
-      price: "6,200",
-      capacity: 15,
-      location: "Kilifi Creek",
-      verified: true,
-    },
-    {
-      id: "6",
-      name: "GLASS BOTTOM BOAT",
-      operator: "Coastal Adventures",
-      image: boatImage,
-      rating: 4.6,
-      reviews: 93,
-      price: "8,500",
-      capacity: 8,
-      location: "Malindi Beach",
-      verified: true,
-    },
-  ];
 
   return (
     <div className="min-h-screen flex flex-col">
