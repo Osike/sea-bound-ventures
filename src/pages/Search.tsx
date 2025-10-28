@@ -19,7 +19,7 @@ const Search = () => {
   const boats = [
     {
       id: "1",
-      name: "JET SKI",
+      name: "SWAHILI DHOWS",
       operator: "Captain John's Tours",
       image: boatImage,
       rating: 4.8,
@@ -32,7 +32,7 @@ const Search = () => {
     },
     {
       id: "2",
-      name: "KITE SURFING",
+      name: "JETSKIS",
       operator: "Traditional Dhow Cruises",
       image: boatImage,
       rating: 4.9,
@@ -44,7 +44,7 @@ const Search = () => {
     },
     {
       id: "3",
-      name: "WIND SURFING",
+      name: "PEDLE BOATS",
       operator: "Island Hopping Co.",
       image: boatImage,
       rating: 4.7,
@@ -56,7 +56,7 @@ const Search = () => {
     },
     {
       id: "4",
-      name: "SWAHILI DHOWS",
+      name: "KAYAKS",
       operator: "Speed Water Sports",
       image: boatImage,
       rating: 4.5,
@@ -69,7 +69,7 @@ const Search = () => {
     },
     {
       id: "5",
-      name: "SNORKELING",
+      name: "YATCH RIDE",
       operator: "Swahili Heritage Tours",
       image: boatImage,
       rating: 4.8,
@@ -81,7 +81,7 @@ const Search = () => {
     },
     {
       id: "6",
-      name: "JET SKI",
+      name: "GLASS BOTTOM BOAT",
       operator: "Coastal Adventures",
       image: boatImage,
       rating: 4.6,
